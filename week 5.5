@@ -1,0 +1,13 @@
+s1 = input()
+s2 = input()
+set_s1 = set(s1)
+set_s2 = set(s2)
+balanced = True
+for char in set_s1:
+    if char not in set_s2:
+        balanced = False
+        break
+if balanced:
+    print("True")
+else:
+    print("False")
