@@ -1,0 +1,23 @@
+def display_unique_words():
+    unique_words = set()  # Set to store unique words
+    entered_words = []    # List to maintain the order of words
+
+    # Read words from the user until a blank line is entered
+    while True:
+        try:
+            word = input()
+            if not word:  # If the user enters a blank line, stop reading
+                break
+            entered_words.append(word)  # Add word to the list
+            unique_words.add(word)      # Add word to the set
+        except EOFError:
+            break
+
+    # Display unique words in the order they were entered
+    for word in entered_words:
+        if word in unique_words:
+            print(word)
+            unique_words.remove(word)  # Remove word from set to avoid duplicates
+
+# Call the function
+display_unique_words()
