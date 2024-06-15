@@ -1,0 +1,13 @@
+def distinct_elements(array):
+    distinct_set = set(array)
+    return distinct_set
+
+# Input handling
+n = int(input())
+array = []
+for _ in range(n):
+    array.append(int(input()))
+
+# Finding and printing distinct elements
+distinct = distinct_elements(array)
+print(*distinct)
