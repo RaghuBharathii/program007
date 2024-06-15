@@ -1,0 +1,17 @@
+def get_pth_factor(n, p):
+    factors = []
+    for i in range(1, n + 1):
+        if n % i == 0:
+            factors.append(i)
+    factors.sort()
+    if len(factors) >= p:
+        return factors[p - 1]
+    else:
+        return 0
+
+# Example usage
+n = int(input())
+p = int(input())
+
+result = get_pth_factor(n, p)
+print(result)
