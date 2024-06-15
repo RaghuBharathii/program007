@@ -1,0 +1,17 @@
+def findPair(arr, n, diff):
+    pair_found = False
+    for i in range(n):
+        for j in range(n):
+            if i != j and (arr[j] - arr[i]) == diff:
+                pair_found = True
+                break
+    if pair_found:
+        print("0")  # Pair Found
+    else:
+        print("1")  # No such pair
+
+# Example usage
+arr = [1, 8, 30, 40, 100]
+n = len(arr)
+diff = -60
+findPair(arr, n, diff)
