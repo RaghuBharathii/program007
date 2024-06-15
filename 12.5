@@ -1,0 +1,21 @@
+num = int(input())  # Total number of shoes in the shop
+l1 = list(map(int, input().split()))  # List of available shoe sizes
+
+m = int(input())  # Number of customer requests
+l2 = []  # List to store customer requests
+
+# Process customer requests
+for i in range(m):
+    s = input()
+    l = list(map(int, s.split()))
+    l2.append(l)
+
+sum = 0  # Initialize the total revenue
+
+# Iterate through customer requests
+for value in l2:
+    if value[0] in l1:  # Check if the requested shoe size is available
+        sum += value[1]  # Add the price to the total revenue
+        l1.remove(value[0])  # Remove the sold shoe size from available sizes
+
+print(sum)  # Print the total revenue
