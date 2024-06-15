@@ -1,0 +1,8 @@
+def compute_total_weight(widget_count, gizmo_count):
+    widget_weight = 75
+    gizmo_weight = 112
+    return widget_count * widget_weight + gizmo_count * gizmo_weight
+widget_count = int(input(""))
+gizmo_count = int(input(""))
+total_weight = compute_total_weight(widget_count, gizmo_count)
+print(f"The total weight of all these widgets and gizmos is {total_weight} grams.")
