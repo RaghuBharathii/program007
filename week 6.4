@@ -1,0 +1,22 @@
+def find_anagram_mapping(A, B):
+    # Create a dictionary to map elements in B to their indices
+    index_map = {}
+    for i, num in enumerate(B):
+        index_map[num] = i
+    
+    # Find the indices of elements in A in B using the index map
+    mapping = [index_map[num] for num in A]
+    
+    # Convert the mapping to a space-separated string
+    mapping_str = ' '.join(map(str, mapping))
+    
+    return mapping_str
+
+# Input handling
+n = int(input())
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
+
+# Find the index mapping
+result = find_anagram_mapping(A, B)
+print(result)
